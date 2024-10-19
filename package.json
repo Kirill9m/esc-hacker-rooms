@@ -4,6 +4,7 @@
   "description": "Webbutveckling – HTML &amp; CSS",
   "main": "index.js",
   "scripts": {
+    "sass:compile": "sass src/style.scss style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
