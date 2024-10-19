@@ -1,13 +1,57 @@
+@mixin button-group {
+
+  button {
+    color: #011827;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: large;
+    padding: 0 60px;
+    margin: 10px;
+    border: 0;
+    border-radius: 0.2rem;
+    background-color: #8ACFE5;
+    height: 4rem;
+
+    &:nth-child(2) {
+      background-color: white;
+      color: #36769D;
+      font-size: 0.9rem;
+      text-decoration: underline;
+    }
+  }
+}
+
+@mixin roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin roboto-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+
+
 .container {
   background-color: #FFF;
   display: grid;
-  grid-template-rows: repeat(42, 1fr);
+  grid-template-rows: repeat(39, 1fr);
   grid-template-columns: repeat(6, 1fr);
   height: 100%;
   width: 100%;
@@ -24,7 +68,8 @@
 
     h1 {
       color: #fff;
-      font-size: 1rem;
+      font-size: 1.5rem;
+      @include roboto-bold;
 
       span {
         display: flex;
@@ -33,9 +78,9 @@
     }
 
     .logo {
-      height: 82px;
-      width: 128px;
-      margin: 20px;
+      height: 100px;
+      width: 150px;
+      margin: 30px 0 0 30px;
     }
   }
 
@@ -68,20 +113,7 @@
   flex-direction: column;
   align-items: center;
 
-  button {
-    color: #000;
-    padding: 0 100px;
-    margin: 10px;
-    border: 0;
-    border-radius: 0.1rem;
-    background-color: #8ACFE5;
-    height: 4rem;
-
-    &:nth-child(2) {
-      background-color: white;
-      color: #8ACFE5;
-    }
-  }
+  @include button-group;
 }
 
 .review {
@@ -92,44 +124,60 @@
   align-items: center;
 
   img {
+    float: left;
     margin: 20px;
     height: 64px;
     width: 64px;
   }
 
-  span,
-  p {
-    padding: 10px 20px 0 0;
+  .review-text {
+    span {
+      @include roboto-regular;
+      font-size: 1.3rem;
+      padding: 0 25px 0 0;
+    }
+
+    p {
+      @include roboto-italic;
+      padding: 5px 20px 0 0;
+      font-size: 1.2rem;
+
+    }
   }
 }
 
+h1 {
+  grid-row: 10 / 11;
+  grid-column: 1 / 7;
+  text-align: center;
+  font-weight: 200;
+  margin: 30px 10px 0 10px;
+
+}
+
 .popular-rooms {
-  grid-row: 11 / 16;
+  grid-row: 11 / 15;
   grid-column: 1 / 7;
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
 
-  h1{
-    position: absolute;
-    top: 950px;
-    left: 0;
-
-  }
-
   .room {
     min-width: 300px;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
-    height: 350px;
-    margin: 0 10px;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
+    height: 400px;
+    margin: 0 20px;
+    border-radius: 0.3rem;
 
     img {
-      height: 150px;
+      height: 180px;
       width: 100%;
-      border-radius: 0.3rem;
+      border-top-left-radius: 0.3rem;
+      border-top-right-radius: 0.3rem;
     }
 
     h2 {
+      @include roboto-regular;
       padding-left: 10px;
     }
 
@@ -144,60 +192,71 @@
     }
 
     .participants {
+      @include roboto-regular;
       display: flex;
-      padding-left: 5rem;
+      padding-left: 1rem;
       padding-bottom: 15px;
+      font-size: 0.9rem;
     }
 
     p {
+      @include roboto-regular;
       white-space: normal;
-      padding: 10px 15px 0 15px;
+      padding: 0px 15px 10px 15px;
     }
 
     button {
       color: #fff;
-      padding: 0 35px;
-      margin: 10px 0 0 128px;
+      padding: 0 30px;
+      margin: 5px 0 0 128px;
       border: none;
       border-radius: 0.2rem;
-      background-color: #ff0000;
+      background-color: #E3170A;
       height: 2.2rem;
+      @include roboto-bold;
       cursor: pointer;
     }
   }
 }
 
-.button-group-two{
-  grid-row: 16 / 18;
+.button-group-two {
+  grid-row: 15 / 17;
   grid-column: 1 / 7;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include button-group;
 }
 
 .mini-footer {
-  grid-row: 18 / 24;
+  grid-row: 17 / 21;
   grid-column: 1 / 7;
   background-color: #011827;
   color: #FFF;
   text-align: center;
 
   p {
-    padding: 60px 30px 10px 30px;
+    margin-top: 50px;
+    @include roboto-regular;
+    padding: 60px 30px 0px 30px;
     font-size: 1.4rem;
   }
 
   button {
     border: 1px solid #8ACFE5;
     color: #8ACFE5;
-    font-size: 1.3rem;
+    padding: 20px 50px 20px 50px;
     background-color: transparent;
+    border-radius: 0.3rem;
+    @include roboto-bold;
+    font-size: 1.4rem;
     cursor: pointer;
   }
 }
 
-.collage-image-one{
-  grid-row: 24 / 28;
+.collage-image-one {
+  grid-row: 21 / 23;
   grid-column: 1 / 7;
 
   img {
@@ -208,7 +267,7 @@
 }
 
 .collage-text-one {
-  grid-row: 28 / 31;
+  grid-row: 23 / 29;
   grid-column: 1 / 7;
   background-color: #FFF;
   text-align: center;
@@ -233,8 +292,8 @@
   }
 }
 
-.collage-image-two{
-  grid-row: 31 / 36;
+.collage-image-two {
+  grid-row: 26 / 31;
   grid-column: 1 / 7;
 
   img {
@@ -245,7 +304,7 @@
 }
 
 .collage-text-two {
-  grid-row: 35 / 41;
+  grid-row: 33 / 35;
   grid-column: 1 / 7;
   background-color: #FFF;
   text-align: center;
@@ -271,7 +330,7 @@
 }
 
 .footer {
-  grid-row: 38 / 43;
+  grid-row: 35 / 40;
   grid-column: 1 / 7;
   background-color: #011827;
   color: #FFF;
