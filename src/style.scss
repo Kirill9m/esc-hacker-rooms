@@ -6,7 +6,6 @@
 
 .header {
     background-color: #011827;
-    ;
 }
 
 .main {
@@ -25,11 +24,13 @@
     background-color: #011827;
 }
 
-nav ul {
+nav{
+    ul {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
-}
+    }
+} 
 
 .container {
     display: grid;
