@@ -1,38 +1,82 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.header {
-    background-color: #011827;
-}
-
-.main {
-    background-color: antiquewhite;
-}
-
-.left {
-    background-color: beige;
-}
-
-.right {
-    background-color: bisque;
-}
-
-.footer {
-    background-color: #011827;
-}
-
-nav{
-    ul {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    }
-} 
 
 .container {
-    display: grid;
-    grid-template-columns: repeat();
+  background-color: #011827;
+  display: grid;
+  grid-template-rows: repeat(17, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  height: 100%;
+  width: 100%;
 }
+
+  .header {
+    grid-row: 1/2;
+    grid-column: span 6;
+
+    .header__logo__text {
+      display: flex;
+      align-items: center;
+
+      h1 {
+        color: #fff;
+        font-size: 1rem;
+        padding: auto;
+
+        span {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      .header__logo {
+        height: 82px;
+        width: 128px;
+        margin: 20px 20px 20px 20px;
+        float: left;
+      }
+    }
+
+    nav {
+      display: none;
+
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+      }
+    }
+  }
+
+  .header__img {
+    grid-row: 2/4;
+    grid-column: span 6;
+    width: 100%;
+  }
+
+  .main {
+    grid-row: 4/10;
+    grid-column: span 6;
+    background-color: #FFF;
+  }
+
+  .about {
+    grid-row: 10/12;
+    grid-column: span 6;
+    background-color: #011827;
+  }
+
+  .collage {
+    grid-row: 12/16;
+    grid-column: span 6;
+    background-color: #FFF;
+  }
+
+  .footer {
+    grid-row: 16/18;
+    grid-column: span 6;
+    background-color: #011827;
+  }
