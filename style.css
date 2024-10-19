@@ -5,16 +5,17 @@
 }
 
 .container {
-  background-color: #011827;
+  background-color: #FFF;
   display: grid;
-  grid-template-rows: repeat(17, 1fr);
+  grid-template-rows: repeat(34, 1fr);
   grid-template-columns: repeat(6, 1fr);
   height: 100%;
   width: 100%;
 }
 
 .header {
-  grid-row: 1/2;
+  background-color: #011827;
+  grid-row: 1/4;
   grid-column: span 6;
 }
 .header .header__logo__text {
@@ -45,32 +46,94 @@
   list-style: none;
 }
 
-.header__img {
-  grid-row: 2/4;
+.header__image {
+  grid-row: 4/8;
   grid-column: span 6;
+}
+.header__image img {
   width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-.main {
-  grid-row: 4/10;
+.buttons__container {
+  grid-row: 8/10;
+  grid-column: span 6;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.buttons__container button {
+  color: #000;
+  padding: 0 100px 0 100px;
+  margin: 10px;
+  border: 0;
+  border-radius: 0.1rem;
+  background-color: #8ACFE5;
+  height: 4rem;
+}
+.buttons__container button:nth-child(2) {
+  background-color: white;
+  color: #8ACFE5;
+}
+
+.review__container {
+  grid-row: 10/12;
   grid-column: span 6;
   background-color: #FFF;
 }
+.review__container img {
+  float: left;
+  margin: 20px;
+  height: 64px;
+  width: 64px;
+}
+.review__container span,
+.review__container p {
+  display: flex;
+  padding: 10px 20px 0 0px;
+}
 
-.about {
-  grid-row: 10/12;
+.popular__container {
+  grid-row: 12/28;
   grid-column: span 6;
-  background-color: #011827;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+}
+.popular__container .popular__container__room__one {
+  min-width: 300px;
+  max-width: 300px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+  height: 350px;
+  margin: 0 10px 0 10px;
+}
+.popular__container .popular__container__room__one p {
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.popular__container .popular__container__room__one img {
+  height: 150px;
+  width: 100%;
+  border-radius: 0.3rem;
+}
+.popular__container .popular__container__room__one .popular__container__raiting img {
+  height: 16px;
+  width: 16px;
+  margin: 0;
 }
 
 .collage {
-  grid-row: 12/16;
+  grid-row: 28/32;
   grid-column: span 6;
   background-color: #FFF;
 }
 
 .footer {
-  grid-row: 16/18;
+  grid-row: 32/35;
   grid-column: span 6;
   background-color: #011827;
 }
