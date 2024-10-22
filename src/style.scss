@@ -14,6 +14,11 @@
     height: 4rem;
 
     &:nth-child(2) {
+      @media screen and (min-width: 800px) {
+        background-color: #E3170A;
+        color: #ffffff;
+        text-decoration: none;
+      }
       background-color: white;
       color: #36769D;
       font-size: 0.9rem;
@@ -51,7 +56,7 @@
 .container {
   background-color: #FFF;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   height: 100%;
   width: 100%;
   
@@ -60,11 +65,7 @@
 .header {
   background-color: #011827;
   grid-row: 1 / 2;
-  grid-column: 1 / 7;
-
-  @media screen and (min-width: 800px) {
-    
-  }
+  grid-column: 1 / 8;
 
   .logo-container {
     display: flex;
@@ -76,8 +77,10 @@
       @include roboto-bold;
 
       span {
+        @media screen and (min-width: 800px) {
+          display: inline;
+        }
         display: flex;
-        flex-direction: column;
       }
     }
 
@@ -104,7 +107,7 @@
 
 .header-image {
   grid-row: 2 / 6;
-  grid-column: 1 / 7;
+  grid-column: 1 / 8;
 
   img {
     width: 100%;
@@ -114,8 +117,12 @@
 }
 
 .button-group {
-  grid-row: 6 / 8;
-  grid-column: 1 / 7;
+  @media screen and (min-width: 800px) {
+    flex-direction: row-reverse;
+    align-items: center;
+    }
+  grid-row: 5 / 6;
+  grid-column: 4 / 5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,7 +132,7 @@
 
 .review {
   grid-row: 8 / 10;
-  grid-column: 1 / 7;
+  grid-column: 1 / 8;
   background-color: #FFF;
   display: flex;
   align-items: center;
@@ -155,7 +162,7 @@
 
 h1 {
   grid-row: 10 / 11;
-  grid-column: 1 / 7;
+  grid-column: 1 / 8;
   text-align: center;
   font-weight: 200;
   margin: 30px 10px 0 10px;
@@ -164,7 +171,7 @@ h1 {
 
 .popular-rooms {
   grid-row: 11 / 15;
-  grid-column: 1 / 7;
+  grid-column: 1 / 8;
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
@@ -228,7 +235,7 @@ h1 {
 
 .button-group-two {
   grid-row: 15 / 17;
-  grid-column: 1 / 7;
+  grid-column: 1 / 8;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -238,7 +245,7 @@ h1 {
 
 .mini-footer {
   grid-row: 17 / 21;
-  grid-column: 1 / 7;
+  grid-column: 1 / 8;
   background-color: #011827;
   color: #FFF;
   text-align: center;
@@ -264,7 +271,7 @@ h1 {
 
 .collage-image-one {
   grid-row: 21 / 23;
-  grid-column: 1 / 7;
+  grid-column: 1 / 8;
 
   img {
     width: 100%;
@@ -275,7 +282,7 @@ h1 {
 
 .collage-text-one {
   grid-row: 23 / 29;
-  grid-column: 1 / 7;
+  grid-column: 1 / 8;
   background-color: #FFF;
   text-align: center;
 
@@ -301,7 +308,7 @@ h1 {
 
 .collage-image-two {
   grid-row: 26 / 31;
-  grid-column: 1 / 7;
+  grid-column: 1 / 8;
 
   img {
     width: 100%;
@@ -312,7 +319,7 @@ h1 {
 
 .collage-text-two {
   grid-row: 33 / 35;
-  grid-column: 1 / 7;
+  grid-column: 1 / 8;
   background-color: #FFF;
   text-align: center;
 
@@ -338,7 +345,7 @@ h1 {
 
 .footer {
   grid-row: 35 / 36;
-  grid-column: 1 / 7;
+  grid-column: 1 / 8;
   background-color: #011827;
   color: #FFF;
   text-align: center;
