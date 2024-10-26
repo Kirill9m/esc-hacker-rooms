@@ -29,9 +29,6 @@
 .header .logo-container h1 {
   color: #fff;
   font-size: 1.5rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   margin-left: 1rem;
 }
 @media screen and (min-width: 800px) {
@@ -41,6 +38,9 @@
 }
 .header .logo-container h1 span {
   display: flex;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 @media screen and (min-width: 800px) {
   .header .logo-container h1 span {
@@ -71,6 +71,9 @@
   list-style: none;
   font-size: 1.2rem;
   text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .header-image {
@@ -177,8 +180,11 @@
   min-width: 300px;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
   height: 400px;
-  margin: 0 1rem 2.5rem 0;
+  margin: 0 0rem 3rem 2rem;
   border-radius: 0.3rem;
+}
+.popular-rooms .room:nth-child(3) {
+  margin-right: 2rem;
 }
 .popular-rooms .room img {
   height: 180px;
@@ -225,7 +231,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 @media screen and (min-width: 800px) {
   .button-group-two {
@@ -389,6 +395,7 @@
   background-color: #011827;
   color: #FFF;
   text-align: start;
+  margin-top: 8rem;
 }
 .footer h2 {
   margin: 0;
