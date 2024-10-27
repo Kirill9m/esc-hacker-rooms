@@ -1,5 +1,4 @@
 @mixin button-group {
-
   button {
     color: #011827;
     font-family: "Roboto", sans-serif;
@@ -52,15 +51,12 @@
   @include roboto-regular;
 }
 
-
-
 .container {
   background-color: #FFF;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   height: 100%;
   width: 100%;
-
 }
 
 .header {
@@ -410,6 +406,7 @@
     font-size: clamp(1.2rem, 1.8vw + 0.3rem, 2.3rem);
     @include roboto-bold;
     text-align: left;
+
     @media screen and (max-width: 800px) {
       font-size: 2rem;
       padding: 0 1rem 0 1rem;
@@ -420,6 +417,7 @@
     margin: 0 0 0 1rem;
     font-size: clamp(1rem, 1.8vw + 0.15rem, 2rem);
     text-align: left;
+
     @media screen and (max-width: 800px) {
       font-size: 1.8rem;
       padding: 0 1rem 0 1rem;
