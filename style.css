@@ -438,13 +438,49 @@
   text-align: start;
   margin-top: 8rem;
 }
-.footer h2 {
-  margin: 0;
-  padding: 1rem 0.5rem 0 1rem;
-  text-align: start;
+.footer section {
+  padding: 0;
+  margin: 3rem 1rem 1rem;
 }
-.footer p {
-  padding: 0 0.5rem 0 1rem;
+.footer nav {
+  margin: 2rem 0 2rem 1rem;
+}
+.footer h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.footer li {
+  list-style: none;
+}
+.footer a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer .play {
+  margin-top: 20px;
+}
+@media screen and (min-width: 800px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: 100px;
+  }
+  .footer section {
+    padding: 6rem 6rem 0 6rem;
+    flex: 2;
+    margin: 0 1rem;
+  }
+  .footer nav {
+    padding: 6rem 0;
+    flex: 1;
+    margin: 0 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

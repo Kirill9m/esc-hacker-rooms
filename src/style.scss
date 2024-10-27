@@ -325,7 +325,7 @@
 .collage-image-one {
   grid-row: 21 / 23;
   grid-column: 1 / 7;
-  
+
 
   @media screen and (min-width: 800px) {
     grid-row: 21 / 23;
@@ -446,13 +446,52 @@
   text-align: start;
   margin-top: 8rem;
 
-  h2 {
-    margin: 0;
-    padding: 1rem 0.5rem 0 1rem;
-    text-align: start;
+  section {
+    padding: 0;
+    margin: 3rem 1rem 1rem;
   }
 
-  p {
-    padding: 0 0.5rem 0 1rem;
+  nav {
+    margin: 2rem 0 2rem 1rem;
+  }
+  
+  h2{
+    @include roboto-bold;
+    margin-bottom: 10px
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a{
+    @include roboto-regular;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .play {
+    margin-top: 20px;
+  }
+
+  @media screen and (min-width: 800px) {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: 100px;
+
+    section {
+      padding: 6rem 6rem 0 6rem;
+      flex: 2;
+      margin: 0 1rem;
+
+    }
+  
+    nav {
+      padding: 6rem 0;
+      flex: 1;
+      margin: 0 1rem;
+    }
   }
 }
