@@ -337,6 +337,7 @@
   grid-row: 23/26;
   grid-column: 1/7;
   background-color: #FFF;
+  margin: 3rem 0 3rem 0;
 }
 @media screen and (min-width: 800px) {
   .collage-text {
@@ -366,7 +367,7 @@
   border: none;
   border-radius: 0.2rem;
   background-color: #E3170A;
-  margin: 1rem 0 0 1rem;
+  margin: 2rem 0 0 1rem;
   float: left;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -395,7 +396,7 @@
   grid-column: 1/7;
   background-color: #FFF;
   text-align: start;
-  margin: 1.5rem 0 2rem 0;
+  margin: 3rem 0 3rem 0;
 }
 @media screen and (min-width: 800px) {
   .collage-text-two {
@@ -425,7 +426,7 @@
   border: none;
   border-radius: 0.2rem;
   background-color: #E3170A;
-  margin: 1rem 0 0 1rem;
+  margin: 2rem 0 0 1rem;
   float: left;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
