@@ -71,7 +71,6 @@
   grid-column: 1 / 7;
 
   @media screen and (min-width: 800px) {
-    font-size: 3rem;
     margin-top: auto;
     font-size: 2.5rem;
   }
@@ -91,6 +90,7 @@
 
         @media screen and (min-width: 800px) {
           display: inline;
+          font-size: 2.5rem;
         }
       }
     }
@@ -337,6 +337,7 @@
   img {
     width: 100%;
     height: auto;
+    object-fit: cover;
   }
 }
 
@@ -350,27 +351,27 @@
     grid-row: 21 / 23;
     grid-column: 4 / 7;
     text-align: center;
-    margin: 5rem 8rem 0 8rem;
+    margin: 3rem 4rem 0 4rem;
   }
 
   h2 {
     margin: 0 0 1rem 1rem;
     text-align: start;
-    font-size: 2.1rem;
+    font-size: clamp(1.2rem, 1.8vw + 0.35rem, 2.3rem);
     @include roboto-bold;
     text-align: left;
   }
 
   h3 {
     margin: 0 0 0 1rem;
-    font-size: 1.9rem;
+    font-size: clamp(1rem, 1.8vw + 0.15rem, 2rem);
     text-align: left;
   }
 
   button {
     color: #fff;
-    height: 70px;
-    width: 300px;
+    height: 60px;
+    width: 280px;
     border: none;
     border-radius: 0.2rem;
     background-color: #E3170A;
@@ -409,34 +410,35 @@
     grid-row: 26 / 31;
     grid-column: 1 / 4;
     text-align: center;
-    margin: 5rem 8rem 0 8rem;
+    margin: 3rem 4rem 0 4rem;
   }
 
   h2 {
     margin: 0 0 1rem 1rem;
     text-align: start;
-    font-size: 2.1rem;
+    font-size: clamp(1.2rem, 1.8vw + 0.7rem, 2.3rem);
     @include roboto-bold;
     text-align: left;
   }
 
   h3 {
     margin: 0 0 0 1rem;
-    font-size: 1.9rem;
+    font-size: clamp(1rem, 1.8vw + 0.2rem, 2rem);
     text-align: left;
   }
 
   button {
     color: #fff;
-    height: 70px;
-    width: 300px;
+    height: 60px;
+    width: 280px;
     border: none;
     border-radius: 0.2rem;
     background-color: #E3170A;
     margin: 2rem 0 0 1rem;
     float: left;
     @include roboto-bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    margin-top: 1rem;
   }
 }
 
@@ -456,8 +458,8 @@
   nav {
     margin: 2rem 0 2rem 1rem;
   }
-  
-  h2{
+
+  h2 {
     @include roboto-bold;
     margin-bottom: 10px
   }
@@ -466,7 +468,7 @@
     list-style: none;
   }
 
-  a{
+  a {
     @include roboto-regular;
     font-size: 1.2rem;
     color: #ffffff;
@@ -489,7 +491,7 @@
       margin: 0 1rem;
 
     }
-  
+
     nav {
       padding: 6rem 0;
       flex: 1;
