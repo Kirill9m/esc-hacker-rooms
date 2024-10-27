@@ -325,20 +325,21 @@
 .collage-image-one {
   grid-row: 21 / 23;
   grid-column: 1 / 7;
+  
 
   @media screen and (min-width: 800px) {
     grid-row: 21 / 23;
     grid-column: 1 / 4;
+    align-items: stretch;
   }
 
   img {
     width: 100%;
     height: auto;
-    object-fit: cover;
   }
 }
 
-.collage-text-one {
+.collage-text {
   grid-row: 23 / 26;
   grid-column: 1 / 7;
   background-color: #FFF;
@@ -347,20 +348,20 @@
     grid-row: 21 / 23;
     grid-column: 4 / 7;
     text-align: center;
-    margin: 5rem 5rem 0 6rem;
+    margin: 5rem 8rem 0 8rem;
   }
 
   h2 {
     margin: 0 0 1rem 1rem;
     text-align: start;
-    font-size: 2rem;
+    font-size: 2.1rem;
     @include roboto-bold;
     text-align: left;
   }
 
   h3 {
     margin: 0 0 0 1rem;
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     text-align: left;
   }
 
@@ -374,7 +375,8 @@
     margin: 1rem 0 0 1rem;
     float: left;
     @include roboto-bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    margin-top: 1rem;
   }
 }
 
@@ -405,19 +407,20 @@
     grid-row: 26 / 31;
     grid-column: 1 / 4;
     text-align: center;
-    margin: 4rem 4rem 0 4rem;
+    margin: 5rem 8rem 0 8rem;
   }
 
   h2 {
     margin: 0 0 1rem 1rem;
     text-align: start;
-    font-size: 2rem;
+    font-size: 2.1rem;
     @include roboto-bold;
     text-align: left;
   }
 
   h3 {
     margin: 0 0 0 1rem;
+    font-size: 1.9rem;
     text-align: left;
   }
 
