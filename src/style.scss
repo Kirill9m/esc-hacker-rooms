@@ -5,14 +5,14 @@
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: large;
+    font-size: 1.3rem;
     padding: 0 60px;
     margin: 0px;
     border: 0;
     border-radius: 0.2rem;
     background-color: #8ACFE5;
-    height: 3.5rem;
-    width: 17rem;
+    height: 4rem;
+    width: 19rem;
 
     &:nth-child(2) {
       @media screen and (min-width: 800px) {
@@ -24,7 +24,7 @@
 
       background-color: white;
       color: #36769D;
-      font-size: 0.9rem;
+      font-size: 1.3rem;
       text-decoration: underline;
     }
   }
@@ -74,17 +74,15 @@
   .logo-container {
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
-    margin: 2rem 0 2rem 2rem;
+    margin: 2rem 0 4rem 2rem;
 
     h1 {
       @media screen and (min-width: 800px) {
-        font-size: 2rem;
+        font-size: 3rem;
+        margin-top: auto;
       }
 
       color: #fff;
-      font-size: 1.5rem;
-      margin-left: 1rem;
 
       span {
         @media screen and (min-width: 800px) {
@@ -93,12 +91,14 @@
 
         display: flex;
         @include roboto-bold;
+        font-size: 2.5rem;
       }
     }
 
     .logo {
-      height: 100px;
-      width: 150px;
+      height: 80px;
+      width: auto;
+      margin-right: 2rem;
     }
   }
 
@@ -114,12 +114,12 @@
       display: flex;
       justify-content: space-evenly;
       list-style: none;
-      margin: 0 6rem 0 6rem;
+      margin: 0 7rem 0 7rem;
 
       a {
         color: #ffffff;
         list-style: none;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         text-decoration: none;
         @include roboto-bold;
       }
@@ -130,12 +130,14 @@
 .header-image {
   grid-row: 2 / 6;
   grid-column: 1 / 7;
-  position: relative;
+  overflow: hidden;
 
   img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    width: 100%;
+    max-height: 450px;
   }
 }
 
@@ -163,27 +165,33 @@
   background-color: #FFF;
   display: flex;
   align-items: center;
-  margin-bottom: 3rem;
+  margin: 5rem;
+
+  div:nth-child(1) {
+    display: none;
+
+    @media screen and (min-width: 800px) {
+      display: block;
+    }
+  }
 
   img {
     float: left;
-    margin: 20px;
-    height: 64px;
-    width: 64px;
+    margin: 0px 20px 20px;
+    height: 96px;
+    width: 96px;
+    border-radius: 3rem;
   }
 
-  .review-text {
-
-    span {
-      font-size: 1.3rem;
-      padding: 0 25px 0 0;
-    }
+  span {
+    font-size: 1.4rem;
+    margin: 0 25px 0 0;
+    text-align: left;
 
     p {
       @include roboto-italic;
-      padding: 5px 20px 0 0;
       font-size: 1.2rem;
-
+      margin: 15px  0  0 136px;
     }
   }
 }
@@ -192,10 +200,9 @@
   grid-row: 10 / 11;
   grid-column: 1 / 7;
   text-align: center;
-  font-weight: 200;
-  margin-bottom: 2rem;
-  @include roboto-bold;
-
+  margin-bottom: 5rem;
+  @include roboto-regular();
+  font-size: 2.2rem;
 }
 
 .popular-rooms {
@@ -207,10 +214,10 @@
 
 
   .room {
-    min-width: 300px;
+    min-width: 370px;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
-    height: 400px;
-    margin: 0 0rem 3rem 2rem;
+    height: 450px;
+    margin: 0 0rem 4rem 2rem;
     border-radius: 0.3rem;
 
     &:nth-child(3) {
@@ -218,20 +225,21 @@
     }
 
     img {
-      height: 180px;
+      height: auto;
       width: 100%;
       border-top-left-radius: 0.3rem;
       border-top-right-radius: 0.3rem;
     }
 
     h2 {
-      margin: 0 0 0 0.5rem;
+      margin: 0.5rem 0 0 0.8rem;
       text-align: left;
+      font-size: 1.7rem;
     }
 
     .rating {
       float: left;
-      padding-left: 10px;
+      padding-left: 15px;
 
       img {
         height: 16px;
@@ -249,17 +257,20 @@
     p {
       white-space: normal;
       padding: 0px 15px 10px 15px;
+      font-size: 1.2rem;
     }
 
     button {
       color: #fff;
-      padding: 0 30px;
-      margin: 1.2rem 0 0 8rem;
+      @include roboto-bold;
+      font-size: 1rem;
+      padding: 13px 35px 33px 35px;
+      float: right;
+      margin-right: 1rem;
       border: none;
       border-radius: 0.2rem;
       background-color: #E3170A;
       height: 2.2rem;
-      cursor: pointer;
     }
   }
 }
@@ -275,7 +286,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 5rem;
 
   @include button-group;
 }
@@ -284,24 +295,26 @@
   grid-row: 17 / 21;
   grid-column: 1 / 7;
   background-color: #011827;
-  color: #FFF;
   text-align: center;
 
-  p {
-    padding: 60px 30px 0px 30px;
+  h2 {
+    color: #FFF;
+    padding: 8rem 25% 2rem 25%;
     font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   button {
-    border: 1px solid #8ACFE5;
+    border: 2px solid #8ACFE5;
     color: #8ACFE5;
-    padding: 20px 50px 20px 50px;
+    padding: 20px 60px 20px 60px;
+    margin-bottom: 2rem;
     background-color: transparent;
     border-radius: 0.3rem;
     @include roboto-bold;
     font-size: 1.4rem;
     cursor: pointer;
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
   }
 }
 
@@ -325,6 +338,8 @@
   @media screen and (min-width: 800px) {
     grid-row: 21 / 23;
     grid-column: 4 / 7;
+    text-align: center;
+    margin: 4rem 4rem 0 4rem;
   }
 
   grid-row: 23 / 26;
@@ -336,10 +351,15 @@
   h2 {
     margin: 0 0 1rem 1rem;
     text-align: start;
+    font-size: 2rem;
+    @include roboto-bold;
+    float: left;
   }
 
-  p {
+  h3 {
     margin: 0 0 0 1rem;
+    font-size: 1.4rem;
+    float: left;
   }
 
   button {
@@ -375,6 +395,8 @@
   @media screen and (min-width: 800px) {
     grid-row: 26 / 31;
     grid-column: 1 / 4;
+    text-align: center;
+    margin: 4rem 4rem 0 4rem;
   }
 
   grid-row: 31 / 33;
@@ -386,9 +408,10 @@
   h2 {
     margin: 0 0 1rem 1rem;
     text-align: start;
+    @include roboto-bold;
   }
 
-  p {
+  h3 {
     margin: 0 0 0 1rem;
   }
 

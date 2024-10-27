@@ -23,17 +23,15 @@
 .header .logo-container {
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
-  margin: 2rem 0 2rem 2rem;
+  margin: 2rem 0 4rem 2rem;
 }
 .header .logo-container h1 {
   color: #fff;
-  font-size: 1.5rem;
-  margin-left: 1rem;
 }
 @media screen and (min-width: 800px) {
   .header .logo-container h1 {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-top: auto;
   }
 }
 .header .logo-container h1 span {
@@ -41,6 +39,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
+  font-size: 2.5rem;
 }
 @media screen and (min-width: 800px) {
   .header .logo-container h1 span {
@@ -48,8 +47,9 @@
   }
 }
 .header .logo-container .logo {
-  height: 100px;
-  width: 150px;
+  height: 80px;
+  width: auto;
+  margin-right: 2rem;
 }
 .header nav {
   display: none;
@@ -64,12 +64,12 @@
   display: flex;
   justify-content: space-evenly;
   list-style: none;
-  margin: 0 6rem 0 6rem;
+  margin: 0 7rem 0 7rem;
 }
 .header nav ul a {
   color: #ffffff;
   list-style: none;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -79,12 +79,14 @@
 .header-image {
   grid-row: 2/6;
   grid-column: 1/7;
-  position: relative;
+  overflow: hidden;
 }
 .header-image img {
   width: 100%;
   height: auto;
   object-fit: cover;
+  width: 100%;
+  max-height: 450px;
 }
 
 .button-group {
@@ -108,19 +110,19 @@
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: large;
+  font-size: 1.3rem;
   padding: 0 60px;
   margin: 0px;
   border: 0;
   border-radius: 0.2rem;
   background-color: #8ACFE5;
-  height: 3.5rem;
-  width: 17rem;
+  height: 4rem;
+  width: 19rem;
 }
 .button-group button:nth-child(2) {
   background-color: white;
   color: #36769D;
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   text-decoration: underline;
 }
 @media screen and (min-width: 800px) {
@@ -138,35 +140,45 @@
   background-color: #FFF;
   display: flex;
   align-items: center;
-  margin-bottom: 3rem;
+  margin: 5rem;
+}
+.review div:nth-child(1) {
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  .review div:nth-child(1) {
+    display: block;
+  }
 }
 .review img {
   float: left;
-  margin: 20px;
-  height: 64px;
-  width: 64px;
+  margin: 0px 20px 20px;
+  height: 96px;
+  width: 96px;
+  border-radius: 3rem;
 }
-.review .review-text span {
-  font-size: 1.3rem;
-  padding: 0 25px 0 0;
+.review span {
+  font-size: 1.4rem;
+  margin: 0 25px 0 0;
+  text-align: left;
 }
-.review .review-text p {
+.review span p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: italic;
-  padding: 5px 20px 0 0;
   font-size: 1.2rem;
+  margin: 15px 0 0 136px;
 }
 
 .rooms-titel {
   grid-row: 10/11;
   grid-column: 1/7;
   text-align: center;
-  font-weight: 200;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
   font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
+  font-size: 2.2rem;
 }
 
 .popular-rooms {
@@ -177,28 +189,29 @@
   white-space: nowrap;
 }
 .popular-rooms .room {
-  min-width: 300px;
+  min-width: 370px;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
-  height: 400px;
-  margin: 0 0rem 3rem 2rem;
+  height: 450px;
+  margin: 0 0rem 4rem 2rem;
   border-radius: 0.3rem;
 }
 .popular-rooms .room:nth-child(3) {
   margin-right: 2rem;
 }
 .popular-rooms .room img {
-  height: 180px;
+  height: auto;
   width: 100%;
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem;
 }
 .popular-rooms .room h2 {
-  margin: 0 0 0 0.5rem;
+  margin: 0.5rem 0 0 0.8rem;
   text-align: left;
+  font-size: 1.7rem;
 }
 .popular-rooms .room .rating {
   float: left;
-  padding-left: 10px;
+  padding-left: 15px;
 }
 .popular-rooms .room .rating img {
   height: 16px;
@@ -213,16 +226,21 @@
 .popular-rooms .room p {
   white-space: normal;
   padding: 0px 15px 10px 15px;
+  font-size: 1.2rem;
 }
 .popular-rooms .room button {
   color: #fff;
-  padding: 0 30px;
-  margin: 1.2rem 0 0 8rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  padding: 13px 35px 33px 35px;
+  float: right;
+  margin-right: 1rem;
   border: none;
   border-radius: 0.2rem;
   background-color: #E3170A;
   height: 2.2rem;
-  cursor: pointer;
 }
 
 .button-group-two {
@@ -231,7 +249,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 5rem;
 }
 @media screen and (min-width: 800px) {
   .button-group-two {
@@ -244,19 +262,19 @@
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: large;
+  font-size: 1.3rem;
   padding: 0 60px;
   margin: 0px;
   border: 0;
   border-radius: 0.2rem;
   background-color: #8ACFE5;
-  height: 3.5rem;
-  width: 17rem;
+  height: 4rem;
+  width: 19rem;
 }
 .button-group-two button:nth-child(2) {
   background-color: white;
   color: #36769D;
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   text-decoration: underline;
 }
 @media screen and (min-width: 800px) {
@@ -272,17 +290,19 @@
   grid-row: 17/21;
   grid-column: 1/7;
   background-color: #011827;
-  color: #FFF;
   text-align: center;
 }
-.mini-footer p {
-  padding: 60px 30px 0px 30px;
+.mini-footer h2 {
+  color: #FFF;
+  padding: 8rem 25% 2rem 25%;
   font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 .mini-footer button {
-  border: 1px solid #8ACFE5;
+  border: 2px solid #8ACFE5;
   color: #8ACFE5;
-  padding: 20px 50px 20px 50px;
+  padding: 20px 60px 20px 60px;
+  margin-bottom: 2rem;
   background-color: transparent;
   border-radius: 0.3rem;
   font-family: "Roboto", sans-serif;
@@ -290,7 +310,7 @@
   font-style: normal;
   font-size: 1.4rem;
   cursor: pointer;
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
 }
 
 .collage-image-one {
@@ -320,14 +340,23 @@
   .collage-text-one {
     grid-row: 21/23;
     grid-column: 4/7;
+    text-align: center;
+    margin: 4rem 4rem 0 4rem;
   }
 }
 .collage-text-one h2 {
   margin: 0 0 1rem 1rem;
   text-align: start;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  float: left;
 }
-.collage-text-one p {
+.collage-text-one h3 {
   margin: 0 0 0 1rem;
+  font-size: 1.4rem;
+  float: left;
 }
 .collage-text-one button {
   color: #fff;
@@ -368,13 +397,18 @@
   .collage-text-two {
     grid-row: 26/31;
     grid-column: 1/4;
+    text-align: center;
+    margin: 4rem 4rem 0 4rem;
   }
 }
 .collage-text-two h2 {
   margin: 0 0 1rem 1rem;
   text-align: start;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
-.collage-text-two p {
+.collage-text-two h3 {
   margin: 0 0 0 1rem;
 }
 .collage-text-two button {
