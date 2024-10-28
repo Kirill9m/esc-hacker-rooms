@@ -125,6 +125,9 @@
   grid-row: 2 / 6;
   grid-column: 1 / 7;
   margin-bottom: 2rem;
+  @media screen and (min-width: 800px) {
+    margin-bottom: 0;
+  }
   img {
     width: 100%;
   }
@@ -295,9 +298,14 @@
 
   h2 {
     color: #FFF;
-    padding: 8rem 25% 2rem 25%;
-    font-size: 1.4rem;
+    padding: 1rem;
+    margin-top: 3rem;
     font-size: 1.6rem;
+
+    @media screen and (min-width: 800px) {
+      padding: 8rem 25% 2rem 25%;
+      margin-top: 0rem;
+    }
   }
 
   button {
@@ -370,10 +378,14 @@
     border: none;
     border-radius: 0.2rem;
     background-color: #E3170A;
-    margin: 2rem 0 0 1rem;
+    margin: 2rem 0 0 2rem;
     float: left;
     @include roboto-bold;
     font-size: 1.4rem;
+
+    @media screen and (min-width: 800px) {
+      margin: 2rem 0 0 1rem;
+    }
   }
 }
 
@@ -436,10 +448,14 @@
     border: none;
     border-radius: 0.2rem;
     background-color: #E3170A;
-    margin: 2rem 0 0 1rem;
+    margin: 2rem 0 0 2rem;
     float: left;
     @include roboto-bold;
     font-size: 1.4rem;
+    
+    @media screen and (min-width: 800px) {
+      margin: 2rem 0 0 1rem;
+    }
   }
 }
 

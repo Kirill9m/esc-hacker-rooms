@@ -80,6 +80,11 @@
   grid-column: 1/7;
   margin-bottom: 2rem;
 }
+@media screen and (min-width: 800px) {
+  .header-image {
+    margin-bottom: 0;
+  }
+}
 .header-image img {
   width: 100%;
 }
@@ -293,9 +298,15 @@
 }
 .mini-footer h2 {
   color: #FFF;
-  padding: 8rem 25% 2rem 25%;
-  font-size: 1.4rem;
+  padding: 1rem;
+  margin-top: 3rem;
   font-size: 1.6rem;
+}
+@media screen and (min-width: 800px) {
+  .mini-footer h2 {
+    padding: 8rem 25% 2rem 25%;
+    margin-top: 0rem;
+  }
 }
 .mini-footer button {
   border: 2px solid #8ACFE5;
@@ -369,11 +380,16 @@
   border: none;
   border-radius: 0.2rem;
   background-color: #E3170A;
-  margin: 2rem 0 0 1rem;
+  margin: 2rem 0 0 2rem;
   float: left;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
+}
+@media screen and (min-width: 800px) {
+  .collage-text button {
+    margin: 2rem 0 0 1rem;
+  }
 }
 
 .collage-image-two {
@@ -437,11 +453,16 @@
   border: none;
   border-radius: 0.2rem;
   background-color: #E3170A;
-  margin: 2rem 0 0 1rem;
+  margin: 2rem 0 0 2rem;
   float: left;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
+}
+@media screen and (min-width: 800px) {
+  .collage-text-two button {
+    margin: 2rem 0 0 1rem;
+  }
 }
 
 .footer {
