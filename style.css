@@ -78,6 +78,7 @@
 .header-image {
   grid-row: 2/6;
   grid-column: 1/7;
+  margin-bottom: 2rem;
 }
 .header-image img {
   width: 100%;
@@ -131,7 +132,12 @@
   background-color: #FFF;
   display: flex;
   align-items: center;
-  margin-right: 1rem;
+  margin: 5rem 3rem 5rem 0.9rem;
+}
+@media screen and (min-width: 800px) {
+  .review {
+    margin: 0 1rem 0 0;
+  }
 }
 .review div:nth-child(1) {
   display: none;
@@ -244,6 +250,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 5rem;
+  margin-top: 2rem;
 }
 .button-group-two button {
   color: #011827;
