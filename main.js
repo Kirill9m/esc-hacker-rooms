@@ -5,7 +5,7 @@ const logoContainer = document.querySelector(".logo-container");
 
 const menuOpenBtn = document.createElement("button");
 menuOpenBtn.setAttribute("class", "menu-open-button");
-menuOpenBtn.style.backgroundColor = "#011827";
+menuOpenBtn.style.backgroundColor = "transparent";
 menuOpenBtn.style.border = "none";
 menuOpenBtn.style.marginLeft = "auto";
 menuOpenBtn.style.paddingRight = "20px";
@@ -23,9 +23,8 @@ menuOpenBtn.addEventListener("click", () => {
 
 const menuCloseBtn = document.createElement("button");
 menuCloseBtn.setAttribute("class", "menu-close-button");
-menuCloseBtn.style.backgroundColor = "#011827";
+menuCloseBtn.style.backgroundColor = "transparent";
 menuCloseBtn.style.border = "none";
-menuCloseBtn.style.marginLeft = "auto";
 menuCloseBtn.style.paddingRight = "20px";
 
 navMenu.appendChild(menuCloseBtn);

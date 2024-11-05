@@ -103,25 +103,46 @@
 
   }
 
-  nav {
+  .nav-menu {
     @media screen and (max-width: 800px) {
     display: none;
     position: fixed;
-    width: 95%;
+    width: 90%;
     height: 95%;
     top: 0px;
-    right: 0px;
     margin: 20px;
     background-color: #011827;
-    justify-content: center;
-
-    .menu-close-button {
-      @media screen and (min-width: 800px) {
-        display: none;
+    text-align: center;
+    
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10rem;
+      li{
+        margin-bottom: 2rem;
       }
     }
+
+    a {
+      color: #ffffff;
+      list-style: none;
+      font-size: 2rem;
+      text-decoration: none;
+      @include roboto-bold;
+    }
   }
-    
+
+  .menu-close-button {
+    @media screen and (min-width: 800px) {
+      display: none;
+    }
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
 
     @media screen and (min-width: 800px) {
       display: block;
