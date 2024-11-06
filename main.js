@@ -17,6 +17,7 @@ menuOpenBtn.appendChild(btnOpenImg);
 
 menuOpenBtn.addEventListener("click", () => {
     navMenu.style.display = "flex";
+    navMenu.classList.toggle("with-animation");
 });
 
 const menuCloseBtn = document.createElement("button");
@@ -34,4 +35,5 @@ menuCloseBtn.appendChild(btnCloseImg);
 
 menuCloseBtn.addEventListener("click", () => {
     navMenu.style.display = "none";
+    navMenu.classList.toggle("with-animation");
 });
