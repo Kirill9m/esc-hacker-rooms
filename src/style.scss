@@ -51,6 +51,10 @@
   @include roboto-regular;
 }
 
+.bgrSmoke {
+
+}
+
 .container {
   background-color: #FFF;
   display: grid;
@@ -94,28 +98,77 @@
       width: auto;
       margin-right: 1rem;
     }
+
+    .menu-open-button {
+      @media screen and (min-width: 800px) {
+        display: none;
+      }
+    }
+
   }
 
-  nav {
+  .nav-menu {
+    @media screen and (max-width: 800px) {
     display: none;
-    margin-bottom: 1.5rem;
+    position: fixed;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    z-index: auto;
+    top: 20px;
+    left: 20px;
+    background-color: #011827;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.3);
+    
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+      li{
+        margin-bottom: 2rem;
+      }
+    }
+
+    a {
+      color: #ffffff;
+      list-style: none;
+      font-size: 2rem;
+      text-decoration: none;
+      @include roboto-bold;
+    }
+  }
+
+  .menu-close-button {
+    @media screen and (min-width: 800px) {
+      display: none;
+    }
+    position: fixed;
+    top: 40px;
+    right: 20px;
+  }
 
     @media screen and (min-width: 800px) {
       display: block;
-    }
+      margin-bottom: 1.5rem;
 
-    ul {
-      display: flex;
-      justify-content: space-evenly;
-      list-style: none;
-      margin: 0 7rem 0 7rem;
-
-      a {
-        color: #ffffff;
+      ul {
+        display: flex;
+        justify-content: space-evenly;
         list-style: none;
-        font-size: 1.5rem;
-        text-decoration: none;
-        @include roboto-bold;
+        margin: 0 7rem 0 7rem;
+  
+        a {
+          color: #ffffff;
+          list-style: none;
+          font-size: 1.5rem;
+          text-decoration: none;
+          @include roboto-bold;
+        }
       }
     }
   }
@@ -125,6 +178,9 @@
   grid-row: 2 / 6;
   grid-column: 1 / 7;
   margin-bottom: 2rem;
+  @media screen and (min-width: 800px) {
+    margin-bottom: 0;
+  }
   img {
     width: 100%;
   }
@@ -295,9 +351,14 @@
 
   h2 {
     color: #FFF;
-    padding: 8rem 25% 2rem 25%;
-    font-size: 1.4rem;
+    padding: 1rem;
+    margin-top: 3rem;
     font-size: 1.6rem;
+
+    @media screen and (min-width: 800px) {
+      padding: 8rem 25% 2rem 25%;
+      margin-top: 0rem;
+    }
   }
 
   button {
@@ -370,10 +431,14 @@
     border: none;
     border-radius: 0.2rem;
     background-color: #E3170A;
-    margin: 2rem 0 0 1rem;
+    margin: 2rem 0 0 2rem;
     float: left;
     @include roboto-bold;
     font-size: 1.4rem;
+
+    @media screen and (min-width: 800px) {
+      margin: 2rem 0 0 1rem;
+    }
   }
 }
 
@@ -436,10 +501,14 @@
     border: none;
     border-radius: 0.2rem;
     background-color: #E3170A;
-    margin: 2rem 0 0 1rem;
+    margin: 2rem 0 0 2rem;
     float: left;
     @include roboto-bold;
     font-size: 1.4rem;
+    
+    @media screen and (min-width: 800px) {
+      margin: 2rem 0 0 1rem;
+    }
   }
 }
 

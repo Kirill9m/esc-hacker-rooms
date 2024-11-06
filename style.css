@@ -51,34 +51,86 @@
   width: auto;
   margin-right: 1rem;
 }
-.header nav {
-  display: none;
-  margin-bottom: 1.5rem;
-}
 @media screen and (min-width: 800px) {
-  .header nav {
-    display: block;
+  .header .logo-container .menu-open-button {
+    display: none;
   }
 }
-.header nav ul {
-  display: flex;
-  justify-content: space-evenly;
-  list-style: none;
-  margin: 0 7rem 0 7rem;
+@media screen and (max-width: 800px) {
+  .header .nav-menu {
+    display: none;
+    position: fixed;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    z-index: auto;
+    top: 20px;
+    left: 20px;
+    background-color: #011827;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  .header .nav-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header .nav-menu ul li {
+    margin-bottom: 2rem;
+  }
+  .header .nav-menu a {
+    color: #ffffff;
+    list-style: none;
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+  }
 }
-.header nav ul a {
-  color: #ffffff;
-  list-style: none;
-  font-size: 1.5rem;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
+.header .nav-menu .menu-close-button {
+  position: fixed;
+  top: 40px;
+  right: 20px;
+}
+@media screen and (min-width: 800px) {
+  .header .nav-menu .menu-close-button {
+    display: none;
+  }
+}
+@media screen and (min-width: 800px) {
+  .header .nav-menu {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  .header .nav-menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0 7rem 0 7rem;
+  }
+  .header .nav-menu ul a {
+    color: #ffffff;
+    list-style: none;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+  }
 }
 
 .header-image {
   grid-row: 2/6;
   grid-column: 1/7;
   margin-bottom: 2rem;
+}
+@media screen and (min-width: 800px) {
+  .header-image {
+    margin-bottom: 0;
+  }
 }
 .header-image img {
   width: 100%;
@@ -293,9 +345,15 @@
 }
 .mini-footer h2 {
   color: #FFF;
-  padding: 8rem 25% 2rem 25%;
-  font-size: 1.4rem;
+  padding: 1rem;
+  margin-top: 3rem;
   font-size: 1.6rem;
+}
+@media screen and (min-width: 800px) {
+  .mini-footer h2 {
+    padding: 8rem 25% 2rem 25%;
+    margin-top: 0rem;
+  }
 }
 .mini-footer button {
   border: 2px solid #8ACFE5;
@@ -369,11 +427,16 @@
   border: none;
   border-radius: 0.2rem;
   background-color: #E3170A;
-  margin: 2rem 0 0 1rem;
+  margin: 2rem 0 0 2rem;
   float: left;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
+}
+@media screen and (min-width: 800px) {
+  .collage-text button {
+    margin: 2rem 0 0 1rem;
+  }
 }
 
 .collage-image-two {
@@ -437,11 +500,16 @@
   border: none;
   border-radius: 0.2rem;
   background-color: #E3170A;
-  margin: 2rem 0 0 1rem;
+  margin: 2rem 0 0 2rem;
   float: left;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
+}
+@media screen and (min-width: 800px) {
+  .collage-text-two button {
+    margin: 2rem 0 0 1rem;
+  }
 }
 
 .footer {
