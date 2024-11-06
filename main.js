@@ -34,5 +34,4 @@ menuCloseBtn.appendChild(btnCloseImg);
 
 menuCloseBtn.addEventListener("click", () => {
     navMenu.style.display = "none";
-    // trashcan.setAttribute("class", "trashcan")
 });
