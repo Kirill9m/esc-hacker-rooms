@@ -44,12 +44,24 @@
         }
 
         .rating {
-            float: left;
+            display: flex;
             padding-left: 15px;
 
-            img {
-                height: 16px;
-                width: 16px;
+            .filled {
+                display: block;
+                width: 1.2rem;
+                height: 1.2rem;
+
+                background-image: url('/img/star.png');
+                background-size: contain;
+            }
+
+            .unfilled {
+                display: block;
+                width: 1.2rem;
+                height: 1.2rem;
+                background-image: url('/img/star_no.png');
+                background-size: contain;
             }
         }
 
