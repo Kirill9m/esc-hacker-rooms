@@ -11,7 +11,7 @@ const challenge = new Challenge({
     type: 'online',
     minParticipants: 2,
     maxParticipants: 5,
-    rating: 4,
+    rating: 2,
     image: "https://placecats.com/600/400",
     tags: ['foo', 'bar']
 });
