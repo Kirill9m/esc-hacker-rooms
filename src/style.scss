@@ -159,12 +159,12 @@
   }
 
   .menu-close-button {
-    @media screen and (min-width: 800px) {
-      display: none;
-    }
     position: fixed;
     top: 40px;
     right: 20px;
+    @media screen and (min-width: 800px) {
+      display: none;
+    }
   }
 
     @media screen and (min-width: 800px) {
