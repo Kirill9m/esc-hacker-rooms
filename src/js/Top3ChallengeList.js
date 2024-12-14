@@ -13,7 +13,7 @@ export default class Top3ChallengeList {
         .slice(0, 5)
         .forEach((challengeData) => {
             const challenge = new Challenge(challengeData);
-
+            
             const elem = challenge.render(elemCreator);
             listElem.append(elem);
         });
