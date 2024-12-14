@@ -20,5 +20,45 @@ describe('TextFilter', () => {
 
             expect(result).toBe(true);
         });
+
+        it('returns false when nothing matches', () => {
+            const data = mockChallengeData();
+            const filter = new TextFilter('StringDont match');
+            const result = filter.doesChallengeMatch(new Challenge(data));
+
+            expect(result).toBe(false);
+        });
+
+        it('returns true when title matches partially', () => {
+            const data = mockChallengeData({ title: 'Hacking' });
+            const filter = new TextFilter('ack');
+            const result = filter.doesChallengeMatch(new Challenge(data));
+
+            expect(result).toBe(true);
+        });
+
+        it('returns true when title matches case insensetive', () => {
+            const data = mockChallengeData({ title: 'Hacking'});
+            const filter = new TextFilter('Ack');
+            const result = filter.doesChallengeMatch(new Challenge(data));
+            
+            expect(result).toBe(true);
+        });
+
+        it('returns true description matches', () => {
+           const data = mockChallengeData({ description: 'Lorem ipsum' });
+           const filter = new TextFilter('Lorem');
+           const result = filter.doesChallengeMatch(new Challenge(data));
+           
+           expect(result).toBe(true);
+        });
+
+        it('returns true description mathces, case sesetive', () => {
+            const data = mockChallengeData({ description: 'Lorem ipsum'});
+            const filter = new TextFilter('lorem');
+            const result = filter.doesChallengeMatch(new Challenge(data));
+
+            expect(result).toBe(true);
+        });
     });
 });
