@@ -19,13 +19,13 @@
     .room {
         display: grid;
         grid-template-columns: 0.7rem 1fr 1fr 0.7rem;
-        min-width: 400px;
         box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
         margin: 0 0rem 4rem 2rem;
         border-radius: 0.3rem;
+        
 
         @media screen and (min-width: 800px) {
-            width: 700px;
+            max-width: 25rem;
             height: auto;
         }
 
@@ -97,5 +97,12 @@
             background-color: #E3170A;
             height: 2.2rem;
         }
+    }
+
+    .popular-rooms-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
     }
 }
