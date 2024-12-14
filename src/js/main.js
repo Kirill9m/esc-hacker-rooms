@@ -1,18 +1,11 @@
-import ApiBackend from "./ApiBAckend";
-import Challenge from "./Challenge";
+import ApiBackend from "./ApiBackend";
 import Menu from "./Menu";
+import Top3ChallengeList from "./Top3ChallengeList";
 
 const menu = new Menu();
 menu.add();
 
 const backend = new ApiBackend("https://lernia-sjj-assignments.vercel.app/api");
 
-const challenges = await backend.loadAllChallenges();
-console.log(challenges);
-for (let x = 0; x < 3; x++) {
-const challenge = new Challenge(challenges[x]);
-
-const elem = challenge.render(document);
-
-document.querySelector(".popular-rooms").append(elem);
-}
+const top3List = new Top3ChallengeList(backend);
+top3List.start(document.querySelector('.popular-rooms'), document);
