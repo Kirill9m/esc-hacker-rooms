@@ -7,14 +7,15 @@ export default class Top3ChallengeList {
 
     async start(listElem, elemCreator) {
         const challengesFromApi = await this.backend.loadAllChallenges();
-        console.log(challengesFromApi);
 
-        for (let i = 0; i < 3; i++) {
-            const challengeData = challengesFromApi[i];
+        challengesFromApi
+        .sort((a, b) => b.rating - a.rating)
+        .slice(0, 5)
+        .forEach((challengeData) => {
             const challenge = new Challenge(challengeData);
 
             const elem = challenge.render(elemCreator);
             listElem.append(elem);
-        }
+        });
     }
 }
