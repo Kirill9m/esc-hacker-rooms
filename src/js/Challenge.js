@@ -35,6 +35,12 @@ export default class Challenge {
         button.textContent = this.data.type == 'online' ? 'Take challenge online' : "Book this room";
         container.append(button);
 
+        this.container = container;
+        
         return container;
+    }
+
+    toggleVisibility(visible) {
+        this.container.style.opacity = visible ? 1 : 0.5;
     }
 }
